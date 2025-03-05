@@ -71,6 +71,93 @@ body {
   color: var(--primary-color);
 }
 
+.transaction-filters {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1rem;
+}
+
+.filters-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.filter-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    flex: 1;
+    min-width: 150px; /* Ensures responsiveness */
+}
+
+.filter-group label {
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.filter-group select,
+.filter-group input {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.2s ease-in-out;
+    width: 100%;
+}
+
+.filter-group select:focus,
+.filter-group input:focus {
+    border-color: #007bff;
+}
+
+.filter-actions {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.apply-button,
+.reset-button {
+    padding: 0.6rem 1.5rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    border: 1px solid #007bff;
+    text-align: center;
+}
+
+.apply-button {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.apply-button:hover {
+    background-color: #0056b3;
+}
+
+.reset-button {
+    background-color: transparent;
+    color: #007bff;
+}
+
+.reset-button:hover {
+    background-color: #007bff;
+    color: #fff;
+}
+
+button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
 /* Button Styles */
 button {
   background-color: var(--primary-color);
@@ -210,3 +297,4 @@ button:disabled {
     grid-template-columns: 1fr;
   }
 }
+
